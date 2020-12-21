@@ -411,7 +411,7 @@ http://##DNS.ip##:30100
 - On the prometheus UI, Go to Status -> Targets to see endpoints.
 
 
- ![](_images/targetsmariadb.png)
+ ![](_images/targetsmariadb.PNG)
 
 
 
