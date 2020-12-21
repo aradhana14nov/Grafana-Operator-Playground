@@ -1,16 +1,17 @@
 
-### Access Grafana Dashboard and configure it to check your metrics
+### Access Grafana Dashboard and configure it to show metrics
 
-- Logged in to the Grafana UI 
+Logged in to the Grafana UI and configure datasource.
 
-- Configure Your DataSource
+### Configure Your DataSource :
 
-Data source could be a database or a collection of logs. 
+Data source could be a database(MySQL) or a collection of metrics(Prometheus). 
+
 Here we will configure Grafana to connect MySQL database.
 
-In earlier steps we have created a database named testdb with a table: Population.
+In earlier steps we have created a database named "testdb" with a table: "Population".
 
-- Create your datasource as MySQL
+***Create your datasource as MySQL***
 
  Complete the web form with your connection details which will looks like below snapshot:
  
@@ -22,7 +23,7 @@ In earlier steps we have created a database named testdb with a table: Populatio
  
  host : ##DNS.ip##:30685 
 
-- Click on save and test. 
+***Click on save and test***
 
  ![](_images/mysql-datasource-connection.PNG)
 
@@ -50,7 +51,7 @@ Now database is connected, we can create a dashboard showing stats about the tes
 
    ![](_images/edit-sql.png)
    
-   Add below query to fetch data from table Population from testdb:
+   Add below query to fetch data from table "Population" from database "testdb":
    
    ![](_images/query-db-to-get-metrics.png)
 
@@ -81,14 +82,8 @@ To create a Prometheus data source in Grafana:
 
 - Set the appropriate Prometheus server URL (for example, http://localhost:30100/)
 
--  Adjust other data source settings as desired (for example, choosing the right Access method).
-
 - Click "Save & Test" to save the new data source.
   
-The following shows an example data source configuration:
-
-
-
 
 ###  Creating a Prometheus graph
 
@@ -102,11 +97,12 @@ Follow the standard way of adding a new Grafana graph :
    
    ![](_images/panel_list_name.png)
 
+
 - Under the "Metrics" tab, select your Prometheus data source (bottom right).
 
 
 - Enter any Prometheus expression into the "Query" field, while using the "Metric" field to lookup metrics via autocompletion.
-
+  
 
 - Tune other graph settings using "Visualise" option until you have a working graph.
 
