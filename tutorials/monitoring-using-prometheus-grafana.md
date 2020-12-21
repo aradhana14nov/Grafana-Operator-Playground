@@ -19,7 +19,7 @@ Prometheus monitoring feature :
 - Prometheus expects to retrieve metrics via HTTP calls done to endpoints that are defined in Prometheus configuration.
 
 
-Lets take the example of MariaDB Server. Here, we will explain the monitoring of MariaDB Sever using Prometheus. 
+Lets take the example of MariaDB Server. Here, we will explain the monitoring of MariaDB Sever using Prometheus and how we can check these metrics on Grafana dashboard. 
 
 ### How to monitor MariaDB server using Prometheus 
 
@@ -405,11 +405,10 @@ Step 6 : Access the Prometheus dashboard using below link.
 
 http://##DNS.ip##:30100
 
-
 ![](_images/prom.png)
 
 
-- On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
+- On the prometheus UI, Go to Status -> Targets to see endpoints.
 
 
  ![](_images/targetsmariadb.png)
@@ -495,13 +494,16 @@ Now click on the `Sign In` button as below :
 ![](_images/signin.png)
 
 You will now need to log in to Grafana Dashboard with the following credentials in the page below:
+
 ```
 user: root
 password: secret
 ```
 ![](_images/login.png)
 
+
 Now you will be able to see the Dashboard like below:
+
 
 ![](_images/dashboard.png)
 
