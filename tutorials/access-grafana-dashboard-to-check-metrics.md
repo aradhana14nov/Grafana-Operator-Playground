@@ -1,13 +1,12 @@
 
 ### Access Grafana Dashboard and configure it to check your metrics
 
-
 - Logged in to the Grafana UI 
 
 - Configure Your DataSource
 
- Data source could be a database or a collection of logs. 
- Here we will configure Grafana to connect MySQL database.
+Data source could be a database or a collection of logs. 
+Here we will configure Grafana to connect MySQL database.
 
 In earlier steps we have created a database named testdb with a table: Population.
 
@@ -23,7 +22,7 @@ In earlier steps we have created a database named testdb with a table: Populatio
  
  host : ##DNS.ip##:30685 
 
-- Hit save and test. 
+- Click on save and test. 
 
 If everything is configured correctly, you should see a green box with the message Database Connection OK.
 
@@ -33,48 +32,31 @@ If everything is configured correctly, you should see a green box with the messa
 
 Now database is connected, we can create a dashboard showing stats about the testdb database we are connected in the previous section.
 
-Dashboards are made from panels of information organized into rows. 
+1. click on New dashboard.
 
-Panels represent a visual representation of a query.  
+2. Click on "Dashboard settings". Give the dashboard Name and click on "Save".
 
-The first panel we are creating will show the total number of population in our testdb database.
+3. Click on Add panel.
 
-### Single Stat Panel
+4. From "Query" dropdown choose "MySQL".
 
-To show a single number, we use the single stat panel.
-
-- On Grafana UI, you have the option create your first dashboard. 
-
-  Choose this option, then select Add Query.
-
-- Select your database from the Query drop-down menu and choose to format this query as a table in the format as drop-down. 
-
-- Select the Edit SQL link and paste the following SQL:
-
-SELECT
-  population
-FROM Population
+5. Click on "Edit SQL" and add below query to fetch data from table Population from testdb:
+   
+   SELECT
+     year as Year,population as Population
+   FROM Population
 
 
- This assumes you have a table called Population and a column named population.
+6. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
-- Your Query page should look like the screenshot below:
+7. According to the type of metrics we need to choose appropriate Visualization form. In this example we are using "Gauge" to see the database table data.
 
+8. In calc option you can use the appropriate function to view the data.In below snapshot we are using "max" to check maximum population with the year details.
 
-
-- Click the Visualization icon and choose Singlestat from the drop-down list options. This will immediately give you a preview of your panel.
-
-
-- Select Max as the value for Show, and you’ll see the maximum value of the population column. 
+9. Finally, click the settings icon to give the panel a meaningful name, such as "mariadb-database-metric". 
 
 
-- Add some color to the background and the number to personalize it. There is a huge amount of customization available to make it look exactly how you want.
-
-
-- Finally, click the settings icon to give the panel a meaningful name, such as Total Population. 
-
-
-You have now created your first panel with a dashboard with a single panel something like the view below:
+You have now created your first panel with a dashboard with a Gauge like below:
 
 
 
