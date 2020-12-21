@@ -357,16 +357,24 @@ kubectl get svc -n my-grafana-operator
 
 Output :
 
+```
+NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+grafana-operator-metrics   ClusterIP   10.96.188.27     <none>        8080/TCP         83s
+grafana-service            ClusterIP   10.105.85.60     <none>        3000/TCP         47s
+grafana-svc                NodePort    10.109.242.171   <none>        3000:30200/TCP   7s
+```
 
-The nodePort from above output is : 30200
+The Service NodePort, port value is : 30200
 
 We can access the Grafana dashboard on the nodePort : 30200 using below url:
 
 
 Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard from your browser.
 
+
 You will see the Grafana page loading as below :
 ![](_images/load.png)
+
 
 Now click on the `Sign In` button as below :
 ![](_images/signin.png)
