@@ -412,21 +412,21 @@ http://##DNS.ip##:30100
 - On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
 
 
- ![](_images/targets.png)
+ ![](_images/prom.png)
 
 
 
 - From the dropdown you can select the query and check for MariaDB Metrics.See below snapshot :
 
 
-![](_images/queryexecution.png)
+![](_images/prom.png)
 
 
 
-Step 7 : Refer tutorial to Grafana Instance and Service in this tutorial.
+Step 7 : Refer tutorial to create Grafana Instance and Service in this tutorial.
 
 
-Step 8:Create the below yaml definition of the Custom Resource to create Instance of Grafana Datasources :
+Step 8: Create the below yaml definition of the Custom Resource to create Instance of Grafana Datasources :
 
 ```execute
 cat <<'EOF' > prometheus-datasources.yaml
