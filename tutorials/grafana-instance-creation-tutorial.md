@@ -98,7 +98,7 @@ Output:
 
 The nodePort from above output is : 30200
 
-We can access the Grafana dashboard on the nodeport : 30200 using below url:
+We can access the Grafana dashboard on the nodePort : 30200 using below url:
 
 
 Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard from your browser.
