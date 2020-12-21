@@ -3,7 +3,7 @@ title: Prometheus Monitoring
 description: This tutorial explains how Prometheus monitors targets/endpoints
 ---
 
-### Prometheus Monitoring
+### Monitoring using Prometheus and Grafana 
 
 
 Prometheus is designed to monitor targets. Servers, databases, standalone virtual machines etc can be monitored with Prometheus.
@@ -252,8 +252,122 @@ kubectl get pods -n my-mariadb-operator-app
 ```
 
 
+Step 5: 
 
-Step 5: Create Instance of ServiceMonitor to monitor MariaDB Services:
+### Install Prometheus Operator and Create Instance of Prometheus Server and ServiceMonitor
+
+
+- Install the Prometheus operator by running the following command:
+
+```execute
+kubectl create -f https://operatorhub.io/install/prometheus.yaml
+```
+
+This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
+
+
+- Watch your operator come up using next command:
+
+```execute
+kubectl get csv -n operators
+```
+
+- Get the associated Pods:
+
+```execute
+kubectl get pods -n operators
+```
+
+
+Note: If you are installing from operatorhub, then by default it installs the operator in operators namespace.
+Below steps assumes that its deployed in operators namespace.
+
+
+
+- Create below CR which will create a Prometheus Instance along with a ServiceAccount and a Service of Type NodePort :
+
+
+```execute
+cat <<'EOF' > prometheusInstance.yaml
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: server
+  labels:
+    prometheus: k8s
+  namespace: operators
+spec:
+  replicas: 1
+  serviceAccountName: prometheus-k8s
+  securityContext: {}
+  serviceMonitorSelector:
+    matchLabels:
+      app: playground  
+  alerting:
+    alertmanagers:
+      - namespace: operators
+        name: alertmanager-main
+        port: web  
+EOF
+```
+
+
+- Execute below command to create Prometheus instance
+
+
+
+```execute
+kubectl create -f prometheusInstance.yaml -n operators
+```
+
+
+- Get the associated Pods:
+
+
+
+```execute
+kubectl get pods -n operators
+```
+
+
+- Create the service to access prometheus server
+
+
+```execute
+cat <<'EOF' > prometheus_service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+spec:
+  type: NodePort
+  ports:
+  - name: web
+    nodePort: 30100
+    port: 9090
+    protocol: TCP
+    targetPort: web
+  selector:
+    app: prometheus
+EOF
+```
+
+- Execute below command to create Prometheus Service:
+
+```execute
+kubectl create -f prometheus_service.yaml -n operators
+```
+
+Access the service :
+
+
+```
+http://##DNS.ip##:30100
+```
+
+
+
+- Create below CR which will create Instance of ServiceMonitor:
 
 
 ```execute
@@ -284,6 +398,18 @@ EOF
 ```execute
 kubectl create -f ServiceMonitor.yaml -n operators
 ```
+
+
+- Get the associated Pods:
+
+
+
+```execute
+kubectl get pods -n operators
+```
+
+
+
 
 Step 6 : Access the Prometheus dashboard using below link. 
 
