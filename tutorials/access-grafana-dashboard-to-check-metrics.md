@@ -24,6 +24,8 @@ In earlier steps we have created a database named testdb with a table: Populatio
 
 - Click on save and test. 
 
+ ![](_images/login.png)
+
 If everything is configured correctly, you should see a green box with the message Database Connection OK.
 
 
@@ -32,11 +34,11 @@ If everything is configured correctly, you should see a green box with the messa
 
 Now database is connected, we can create a dashboard showing stats about the testdb database we are connected in the previous section.
 
-1. click on New dashboard.
+1. Click on New dashboard.
 
 2. Click on "Dashboard settings". Give the dashboard Name and click on "Save".
 
-3. Click on Add panel.
+3. Click on Add panel.Provide panel name as well.
 
 4. From "Query" dropdown choose "MySQL".
 
@@ -59,7 +61,7 @@ Now database is connected, we can create a dashboard showing stats about the tes
 You have now created your first panel with a dashboard with a Gauge like below:
 
 
-
+![](_images/login.png)
 
 ### Creating a Prometheus data source
 
