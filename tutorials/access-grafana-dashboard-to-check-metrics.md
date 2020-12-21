@@ -112,7 +112,7 @@ Follow the standard way of adding a new Grafana graph :
    ![](_images/Dashboard-name-setting.png)
    
    
-    ![](_images/panel_list_name.png)
+   ![](_images/panel_list_name.png)
 
 - Under the "Metrics" tab, select your Prometheus data source (bottom right).
 
