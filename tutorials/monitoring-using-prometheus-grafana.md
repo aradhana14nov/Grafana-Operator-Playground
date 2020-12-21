@@ -357,16 +357,9 @@ EOF
 kubectl create -f prometheus_service.yaml -n operators
 ```
 
-Access the service :
 
 
-```
-http://##DNS.ip##:30100
-```
-
-
-
-- Create below CR which will create Instance of ServiceMonitor:
+- Create Instance of ServiceMonitor using below yaml :
 
 
 ```execute
@@ -402,7 +395,6 @@ kubectl create -f ServiceMonitor.yaml -n operators
 - Get the associated Pods:
 
 
-
 ```execute
 kubectl get pods -n operators
 ```
@@ -412,9 +404,8 @@ kubectl get pods -n operators
 
 Step 6 : Access the Prometheus dashboard using below link. 
 
-```
 http://##DNS.ip##:30100
-```
+
 
 ![](_images/prom.png)
 
