@@ -24,7 +24,7 @@ In earlier steps we have created a database named testdb with a table: Populatio
 
 - Click on save and test. 
 
- ![](_images/login.png)
+ ![](_images/mysql-datasource-connection.PNG)
 
 If everything is configured correctly, you should see a green box with the message Database Connection OK.
 
@@ -38,16 +38,21 @@ Now database is connected, we can create a dashboard showing stats about the tes
 
 2. Click on "Dashboard settings". Give the dashboard Name and click on "Save".
 
-3. Click on Add panel.Provide panel name as well.
+3. Click on Add panel.Provide panel name.Give the panel a meaningful name, such as "mariadb-database-metric". 
 
 4. From "Query" dropdown choose "MySQL".
 
-5. Click on "Edit SQL" and add below query to fetch data from table Population from testdb:
+5. Click on "Edit SQL".
    
    SELECT
      year as Year,population as Population
    FROM Population
 
+   ![](_images/edit-sql.png)
+   
+   Add below query to fetch data from table Population from testdb:
+   
+   ![](_images/query-db-to-get-metrics.png)
 
 6. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
@@ -55,13 +60,12 @@ Now database is connected, we can create a dashboard showing stats about the tes
 
 8. In calc option you can use the appropriate function to view the data.In below snapshot we are using "max" to check maximum population with the year details.
 
-9. Finally, click the settings icon to give the panel a meaningful name, such as "mariadb-database-metric". 
-
-
 You have now created your first panel with a dashboard with a Gauge like below:
 
 
-![](_images/login.png)
+![](_images/mariadb-gauge-db-metrics-max-population.png)
+
+
 
 ### Creating a Prometheus data source
 
