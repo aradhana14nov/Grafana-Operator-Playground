@@ -252,10 +252,9 @@ kubectl get pods -n my-mariadb-operator-app
 ```
 
 
-Step 5: 
-
 ### Install Prometheus Operator and Create Instance of Prometheus Server and ServiceMonitor
 
+Step 5: 
 
 - Install the Prometheus operator by running the following command:
 
