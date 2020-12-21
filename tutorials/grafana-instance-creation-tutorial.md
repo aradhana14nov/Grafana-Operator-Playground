@@ -3,7 +3,7 @@ title: Grafana Instance Creation tutorial
 description: This tutorial explains how create Instances for your Grafana Operator.
 ---
 
-### Create this CR which will create a Grafana Instance
+###  Create below yaml definition of the Custom Resource to create Grafana Instance
 
 ```execute
 cat <<'EOF' > GrafanaInstance.yaml
@@ -39,19 +39,19 @@ Execute below command to create Grafana instance
 ```execute
 kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
 ```
-You will see the following resources to be created:
+You will see the following resources created:
 
 ```output
 grafana.integreatly.org/example-grafana created
 ```
 
-Get the associated Pods:
+Check pods status:
 
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
 
-You will be able to see the below output:
+Output:
 
 ```output
 NAME                                  READY   STATUS    RESTARTS   AGE
@@ -59,7 +59,7 @@ grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-### Create this for Grafana Service of type NodePort
+###  Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort
 
 ```execute
 cat <<'EOF' > GrafanaService.yaml
@@ -85,6 +85,22 @@ Execute below command to create Grafana Service
 ```execute
 kubectl create -f GrafanaService.yaml -n my-grafana-operator
 ```
+
+Find the port for NodePort service using command :
+
+```execute
+kubectl get svc -n my-grafana-operator
+```
+
+Output:
+
+
+
+The nodePort from above output is : 30200
+
+We can access the Grafana dashboard on the nodeport : 30200 using below url:
+
+
 Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard from your browser.
 
 You will see the Grafana page loading as below :
