@@ -394,7 +394,6 @@ kubectl create -f ServiceMonitor.yaml -n operators
 
 - Get the associated Pods:
 
-
 ```execute
 kubectl get pods -n operators
 ```
@@ -413,14 +412,14 @@ http://##DNS.ip##:30100
 - On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
 
 
-![](_images/prometheus-ui-targets.png)
+ ![](_images/targets.png)
 
 
 
 - From the dropdown you can select the query and check for MariaDB Metrics.See below snapshot :
 
 
-![](_images/prometheus-metric-query-execution.png)
+![](_images/queryexecution.png)
 
 
 
@@ -480,7 +479,7 @@ grafana-service            ClusterIP   10.105.85.60     <none>        3000/TCP  
 grafana-svc                NodePort    10.109.242.171   <none>        3000:30200/TCP   7s
 ```
 
-The Service NodePort, port value is : 30200
+From Service NodePort, port value is : 30200
 
 We can access the Grafana dashboard on the nodePort : 30200 using below url:
 
