@@ -4,7 +4,7 @@
 
 - Logged in to the Grafana UI 
 
-- Configuring Your DataSource
+- Configure Your DataSource
 
  Data source could be a database or a collection of logs. 
  Here we will configure Grafana to connect MySQL database.
