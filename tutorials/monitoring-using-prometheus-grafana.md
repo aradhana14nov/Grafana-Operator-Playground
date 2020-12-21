@@ -133,8 +133,62 @@ exit
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
+- Create database testdb
+
+```execute
+create database testdb;
+```
 
 
+- Use the testdb to create some table 
+
+```execute
+use testdb;
+```
+
+
+- Create table 
+
+```execute
+create table Population(year numeric,population numeric);
+```
+
+-  Insert few datas into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
+
+```execute
+insert into Population values(2017,1380004385 );
+```
+
+```execute
+insert into Population values(2018,1366417754 );
+```
+
+```execute
+insert into Population values(2019,1352642280 );
+```
+
+```execute
+insert into Population values(2020,1338676785 );
+```
+
+
+- Retrieve the data from table
+
+```execute
+select * from Population;
+```
+
+- Exit from testdb :
+
+```execute
+exit
+```
+
+- Exit from pod :
+
+```execute
+exit
+```
 
 
 Step 4: Enable monitoring service for MariaDB Server.
@@ -157,7 +211,7 @@ Step 4: Enable monitoring service for MariaDB Server.
   
   From above command output, mariadb-service port is 30685 
 
-- To enable monitoring using Prometheus exporter pod and service , create the below yaml definition of the Custom Resource.
+- To enable monitoring using Prometheus exporter pod and service, create the below yaml definition of the Custom Resource.
 
 ```execute
 cat <<'EOF'> MariaDBmonitoring.yaml
@@ -237,9 +291,24 @@ Step 6 : Access the Prometheus dashboard using below link.
 http://##DNS.ip##:30100
 ```
 
-On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
+![](_images/prom.png)
 
-Step 7 : Go to Step of Creating Grafana Instance and Service for Grafana Instance in this tutorial.
+
+- On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
+
+
+![](_images/prometheus-ui-targets.png)
+
+
+
+- From the dropdown you can select the query and check for MariaDB Metrics.See below snapshot :
+
+
+![](_images/prometheus-metric-query-execution.png)
+
+
+
+Step 7 : Refer tutorial to Grafana Instance and Service in this tutorial.
 
 
 Step 8:Create the below yaml definition of the Custom Resource to create Instance of Grafana Datasources :
@@ -265,6 +334,8 @@ spec:
 EOF
 ```
 
+Here we are choosing Prometheus as our datasourse.
+
 
 Execute below command to create an instance of Grafana datasourse using the above yaml definition::
 
@@ -287,15 +358,35 @@ kubectl get svc -n my-grafana-operator
 Output :
 
 
-Get the Nodeport of grafana-svc using which we can access Grafana dashboard.
+The nodePort from above output is : 30200
+
+We can access the Grafana dashboard on the nodePort : 30200 using below url:
 
 
-- Access Grafana UI using url : [http://##DNS.ip##:30200](http://##DNS.ip##:30101/)
+Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard from your browser.
+
+You will see the Grafana page loading as below :
+![](_images/load.png)
+
+Now click on the `Sign In` button as below :
+![](_images/signin.png)
+
+You will now need to log in to Grafana Dashboard with the following credentials in the page below:
+```
+user: root
+password: secret
+```
+![](_images/login.png)
+
+Now you will be able to see the Dashboard like below:
+
+![](_images/dashboard.png)
+
 
 
 - Save below MariaDBDashboard.json on your local system. 
 
- Once we logged-in to the Grafana-UI using our credentials, We need to import this MariaDBDashboard.json file from Grafana UI to configure our Grafana Dashboard using datasourse as : Prometheus.
+ Once we logged-in to the Grafana-UI using our credentials, We need to import this MariaDBDashboard.json file from Grafana UI to configure our Grafana Dashboard using datasourse as : Prometheus. This json will configure dashboard and show MariaDB query metrics. 
 
 
 MariaDBDashboard.json
