@@ -2,9 +2,9 @@
 ### Access Grafana Dashboard and configure it to check your metrics
 
 
-Step 1: Logged in to the Grafana UI 
+- Logged in to the Grafana UI 
 
-Step2 :Configuring Your DataSource
+- Configuring Your DataSource
 
 Data source could be a database or a collection of logs. 
 Here we will configure Grafana to connect MySQL database.
