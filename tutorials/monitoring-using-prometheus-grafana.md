@@ -239,10 +239,10 @@ http://##DNS.ip##:30100
 
 On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
 
-Step 7 : Go to Step of Creating Grafana Instance and Service for Grafana Instance.
+Step 7 : Go to Step of Creating Grafana Instance and Service for Grafana Instance in this tutorial.
 
 
-Step 8:Create below CR which will create Instance of Grafana Datasources :
+Step 8:Create the below yaml definition of the Custom Resource to create Instance of Grafana Datasources :
 
 ```execute
 cat <<'EOF' > prometheus-datasources.yaml
@@ -266,7 +266,7 @@ EOF
 ```
 
 
-Execute below command to create Grafana datasources instance:
+Execute below command to create an instance of Grafana datasourse using the above yaml definition::
 
 
 ```execute
@@ -277,7 +277,7 @@ kubectl create -f prometheus-datasources.yaml -n my-grafana-operator
 Step 9 : Import Grafana dashboard via Grafana UI
 
 
-- Execute below command to get all services in my-grafana-operator namespace.
+- Execute below command to get all services in "my-grafana-operator" namespace.
 
  ```execute
 kubectl get svc -n my-grafana-operator
@@ -295,7 +295,7 @@ Get the Nodeport of grafana-svc using which we can access Grafana dashboard.
 
 - Save below MariaDBDashboard.json on your local system. 
 
-  We need to import this MariaDBDashboard.json file from Grafana UI to configure our Grafana Dashboard using datasourse as : Prometheus.
+ Once we logged-in to the Grafana-UI using our credentials, We need to import this MariaDBDashboard.json file from Grafana UI to configure our Grafana Dashboard using datasourse as : Prometheus.
 
 
 MariaDBDashboard.json
