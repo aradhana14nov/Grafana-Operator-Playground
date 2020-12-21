@@ -412,14 +412,14 @@ http://##DNS.ip##:30100
 - On the prometheus UI, Go to Status tab. Choose option:Targets to see endpoints.
 
 
- ![](_images/prom.png)
+ ![](_images/targets.png)
 
 
 
 - From the dropdown you can select the query and check for MariaDB Metrics.See below snapshot :
 
 
-![](_images/prometheus-metric-query-execution.PNG)
+![](_images/queryexecution.PNG)
 
 
 
