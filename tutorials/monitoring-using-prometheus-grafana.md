@@ -129,7 +129,7 @@ exit
 - To login through root user use below command:
 
 
-```
+```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
