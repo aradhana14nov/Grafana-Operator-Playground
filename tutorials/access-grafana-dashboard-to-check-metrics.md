@@ -6,18 +6,18 @@
 
 - Configuring Your DataSource
 
-Data source could be a database or a collection of logs. 
-Here we will configure Grafana to connect MySQL database.
+ Data source could be a database or a collection of logs. 
+ Here we will configure Grafana to connect MySQL database.
 
 In earlier steps we have created a database named testdb with a table: Population.
 
 - Create your datasource as MySQL
 
-Complete the web form with your connection details which will looks like below snapshot:
-database: testdb
-username: root
-password: password
-host : ##DNS.ip##:30685 
+ Complete the web form with your connection details which will looks like below snapshot:
+ database: testdb
+ username: root
+ password: password
+ host : ##DNS.ip##:30685 
 
 Next, Hit save and test. 
 
@@ -39,31 +39,36 @@ The first panel we are creating will show the total number of population in our 
 
 To show a single number, we use the single stat panel.
 
-On Grafana UI, you have the option create your first dashboard. 
+- On Grafana UI, you have the option create your first dashboard. 
 
-Choose this option, then select Add Query.
+  Choose this option, then select Add Query.
 
-Select your database from the Query drop-down menu and choose to format this query as a table in the format as drop-down. 
-Select the Edit SQL link and paste the following SQL:
+- Select your database from the Query drop-down menu and choose to format this query as a table in the format as drop-down. 
+
+- Select the Edit SQL link and paste the following SQL:
 
 SELECT
   population
 FROM Population
 
 
-This assumes you have a table called Population and a column named population.
+ This assumes you have a table called Population and a column named population.
 
-Your Query page should look like the screenshot below:
+- Your Query page should look like the screenshot below:
 
 
 
-Click the Visualization icon and choose Singlestat from the drop-down list options. This will immediately give you a preview of your panel.
+- Click the Visualization icon and choose Singlestat from the drop-down list options. This will immediately give you a preview of your panel.
 
-Select Max as the value for Show, and you’ll see the maximum value of the population column. 
 
-Add some color to the background and the number to personalize it. There is a huge amount of customization available to make it look exactly how you want.
+- Select Max as the value for Show, and you’ll see the maximum value of the population column. 
 
-Finally, click the settings icon to give the panel a meaningful name, such as Total Population. 
+
+- Add some color to the background and the number to personalize it. There is a huge amount of customization available to make it look exactly how you want.
+
+
+- Finally, click the settings icon to give the panel a meaningful name, such as Total Population. 
+
 
 You have now created your first panel with a dashboard with a single panel something like the view below:
 
