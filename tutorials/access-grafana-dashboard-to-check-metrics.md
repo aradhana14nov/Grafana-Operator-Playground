@@ -14,12 +14,16 @@ In earlier steps we have created a database named testdb with a table: Populatio
 - Create your datasource as MySQL
 
  Complete the web form with your connection details which will looks like below snapshot:
+ 
  database: testdb
+ 
  username: root
+ 
  password: password
+ 
  host : ##DNS.ip##:30685 
 
-Next, Hit save and test. 
+- Hit save and test. 
 
 If everything is configured correctly, you should see a green box with the message Database Connection OK.
 
