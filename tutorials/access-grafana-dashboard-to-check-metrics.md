@@ -97,18 +97,26 @@ The following shows an example data source configuration:
 
 Follow the standard way of adding a new Grafana graph :
 
--  Click the graph title, then click "Edit".
+-  Click the graph title(panel_list_name), then click "Edit".
+
+   
+   ![](_images/Dashboard-name-setting.png)
+   
+   
+    ![](_images/panel_list_name.png)
 
 - Under the "Metrics" tab, select your Prometheus data source (bottom right).
 
+
 - Enter any Prometheus expression into the "Query" field, while using the "Metric" field to lookup metrics via autocompletion.
 
-- To format the legend names of time series, use the "Legend format" input. For example, to show only the method and status labels of a returned query result, separated by a dash, you could use the legend format string {{method}} - {{status}}.
 
 - Tune other graph settings using "Visualise" option until you have a working graph.
 
+
 - The following shows an example Prometheus graph configuration:
 
+![](_images/metric-for-global-status-commands-total.png)
 
 
 ### Conclusion 
