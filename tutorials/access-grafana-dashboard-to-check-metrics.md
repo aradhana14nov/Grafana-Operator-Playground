@@ -3,6 +3,8 @@
 
 Logged in to the Grafana UI and configure datasource.
 
+![](_images/dashboard.png)
+
 ### Configure Your DataSource :
 
 Data source could be a database(MySQL) or a collection of metrics(Prometheus). 
