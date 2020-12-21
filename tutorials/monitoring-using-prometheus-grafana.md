@@ -419,7 +419,7 @@ http://##DNS.ip##:30100
 - From the dropdown you can select the query and check for MariaDB Metrics.See below snapshot :
 
 
-![](_images/prom.png)
+![](_images/prometheus-metric-query-execution.PNG)
 
 
 
