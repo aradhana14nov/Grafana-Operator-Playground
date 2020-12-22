@@ -415,10 +415,11 @@ http://##DNS.ip##:30100
 
 
 
-- From the dropdown you can select the query and check for MariaDB Metrics.See below snapshot :
+- From the dropdown you can select the query and click on "Execute" to see MariaDB Metrics. See below snapshot :
 
 
 ![](_images/queryexecution.PNG)
+
 
 
 
