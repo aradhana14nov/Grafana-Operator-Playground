@@ -45,7 +45,7 @@ Now database is connected, we can create a dashboard showing stats about the tes
   - Click on "Add panel". A new panel window will come.    
   - Click on "Add Query".  
    
-  ![](_images/add-panel.png) 
+       ![](_images/add-panel.png) 
   
   - Click on "General" option on left hand side. This will provide option to give a Title to the panel.
   
