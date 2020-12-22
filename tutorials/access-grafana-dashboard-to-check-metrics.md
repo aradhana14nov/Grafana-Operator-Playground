@@ -15,8 +15,11 @@ Here we will configure Grafana to connect MySQL database.In earlier steps we hav
  Complete the web form with your connection details which will looks like below snapshot:
  
  database: testdb 
+ 
  username: root 
+ 
  password: password 
+ 
  host : ##DNS.ip##:30685 
 
 ***Click on save and test***
@@ -40,21 +43,22 @@ Now database is connected, we can create a dashboard showing stats about the tes
 
 4. From "Query" dropdown choose "MySQL".
 
-5. Click on "Edit SQL".
+5. Click on "Edit SQL".Add below query to fetch data from table "Population" from database "testdb":
+   
    
    SELECT
      year as Year,population as Population
    FROM Population
 
+   
    ![](_images/edit-sql.png)
    
-   Add below query to fetch data from table "Population" from database "testdb":
-   
+  
    ![](_images/query-db-to-get-metrics.png)
 
 6. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
-7. According to the type of metrics we need to choose appropriate Visualization form. In this example we are using "Gauge" to see the database table data.
+7. According to the type of metrics we need to choose appropriate Visualization form. In this example we are using "Gauge" to see the MariaDB "testdb" database table:    "Population" data.
 
 8. In calc option you can use the appropriate function to view the data.In below snapshot we are using "max" to check maximum population with the year details.
 
