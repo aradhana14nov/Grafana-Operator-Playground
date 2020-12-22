@@ -39,9 +39,30 @@ Now database is connected, we can create a dashboard showing stats about the tes
 
 2. Click on "Dashboard settings". Give the dashboard Name and click on "Save".
 
-3. Click on Add panel.Provide panel name.Give the panel a meaningful name, such as "mariadb-database-metric". 
+   ![](_images/give-name-to-dashboard.png)
+
+3. Give a meaningful Title to the Panel list such as "mariadb-database-metric".
+   - Click on "Add panel". A new panel window will come. 
+       
+     
+   - Click on "Add Query". 
+   
+   
+     ![](_images/add-panel.png)
+   
+     
+   - Click on "General" option on left hand side. This will provide option to give a Title to the panel.
+
+     
+     ![](_images/add-panel-name-general-option.png)
+     
+     
+     ![](_images/panel-name.PNG)
 
 4. From "Query" dropdown choose "MySQL".
+
+   
+   ![](_images/add-datasource-as-mysql.png)
 
 5. Click on "Edit SQL".Add below query to fetch data from table "Population" from database "testdb":
    
@@ -57,6 +78,8 @@ Now database is connected, we can create a dashboard showing stats about the tes
    ![](_images/query-db-to-get-metrics.png)
 
 6. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
+
+  ![](_images/visualization.png)
 
 7. According to the type of metrics we need to choose appropriate Visualization form. In this example we are using "Gauge" to see the MariaDB "testdb" database table:    "Population" data.
 
