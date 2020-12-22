@@ -422,6 +422,7 @@ http://##DNS.ip##:30100
 
 
 
+### Install Grafana Operator and create Grafana Instance and Grafana NodePort Service
 
 
 Step 7 : If you already install with Grafana Operator and created Grafana Instance and Service you can skip this steps, else refer the Grafana Create Instance and Service tutorial tile in this tutorial.
