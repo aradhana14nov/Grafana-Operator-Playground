@@ -113,27 +113,33 @@ To create a Prometheus data source in Grafana:
 
 Follow the standard way of adding a new Grafana graph :
 
--  Click the graph title(panel_list_name), then click "Edit".
+- Click on New dashboard.
 
+- Click on "Dashboard settings".Give dashboard Name and click on "Save".
+
+ ![](_images/Dashboard-name-setting.png)
+
+- Click the graph title(panel_list_name), then click "Edit".
+
+- Click on "General" option on left hand side. This will provide option to give a Title to the panel. 
    
-   ![](_images/Dashboard-name-setting.png)
-   
-   
-   ![](_images/panel_list_name.png)
+      
+  ![](_images/panel_list_name.png)
 
 
-- Under the "Metrics" tab, select your Prometheus data source (bottom right).
+- Under the "Metrics" tab, select your "Prometheus" data source (bottom right).
 
 
 - Enter any Prometheus expression into the "Query" field, while using the "Metric" field to lookup metrics via autocompletion.
+  For example say here we are executing query : "mysql_global_status_commands_total"  
   
 
-- Tune other graph settings using "Visualise" option until you have a working graph.
+- Tune other graph settings using "Visualization" option until you have a working graph.
 
 
 - The following shows an example Prometheus graph configuration:
 
-![](_images/metric-for-global-status-commands-total.png)
+ ![](_images/metric-for-global-status-commands-total.png)
 
 
 ### Conclusion 
