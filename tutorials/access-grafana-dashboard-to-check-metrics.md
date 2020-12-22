@@ -101,7 +101,7 @@ To create a Prometheus data source in Grafana:
 
 - Select "Prometheus" as the type.
 
-- Set the appropriate Prometheus server URL (for example, http://localhost:30100/)
+- Set the appropriate Prometheus server URL : http://prometheus-operated.operators:9090 as mentioned in Grafana datasource yaml file: prometheus-datasources.yaml
 
 - Click "Save & Test" to save the new data source.
   
@@ -127,7 +127,7 @@ Follow the standard way of adding a new Grafana graph :
   ![](_images/panel_list_name.png)
 
 
-- Under the "Metrics" tab, select your "Prometheus" data source (bottom right).
+- Under the "Metrics" tab, select your "Prometheus" data source.
 
 
 - Enter any Prometheus expression into the "Query" field, while using the "Metric" field to lookup metrics via autocompletion.
