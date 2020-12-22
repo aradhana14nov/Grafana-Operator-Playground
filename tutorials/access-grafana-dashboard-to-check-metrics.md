@@ -42,25 +42,20 @@ Now database is connected, we can create a dashboard showing stats about the tes
    ![](_images/rename-dashboard.png)
 
 3. Give a meaningful Title to the Panel list such as "mariadb-database-metric".
-   Click on "Add panel". A new panel window will come. 
-       
-     
-   Click on "Add Query". 
+  - Click on "Add panel". A new panel window will come.    
+  - Click on "Add Query".  
    
-   
-     ![](_images/add-panel.png)
-   
+  ![](_images/add-panel.png) 
+  
+  - Click on "General" option on left hand side. This will provide option to give a Title to the panel.
+  
+  ![](_images/general-option.png)
      
-   Click on "General" option on left hand side. This will provide option to give a Title to the panel.
-
-     
-     ![](_images/general-option.png)
-     
-     
-     ![](_images/panel-name.png)
+    
+  ![](_images/panel-name.png)
 
 4. From "Query" dropdown choose "MySQL".
-    ![](_images/panel-name.png)
+    
    
    ![](_images/add-datasource-as-mysql.png)
 
