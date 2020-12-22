@@ -119,7 +119,7 @@ Follow the standard way of adding a new Grafana graph :
 
  ![](_images/Dashboard-name-setting.png)
 
-- Click the graph title(panel_list_name), then click "Edit".
+- Click the "Panel Title", then click "Edit".
 
 - Click on "General" option on left hand side. This will provide option to give a Title to the panel. 
    
