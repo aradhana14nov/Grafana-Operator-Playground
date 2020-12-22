@@ -463,7 +463,7 @@ kubectl create -f prometheus-datasources.yaml -n my-grafana-operator
 ```
 
 
-Step 9 : Import Grafana dashboard via Grafana UI
+Step 9 : Configure Grafana dashboard via Grafana UI
 
 
 - Execute below command to get all services in "my-grafana-operator" namespace.
@@ -483,7 +483,7 @@ grafana-service            ClusterIP   10.105.85.60     <none>        3000/TCP  
 grafana-svc                NodePort    10.109.242.171   <none>        3000:30200/TCP   7s
 ```
 
-From Service NodePort, port value is : 30200
+Port value of "grafana-svc" Service NodePort is : 30200
 
 
 We can access the Grafana dashboard on the nodePort : 30200 using below url:
