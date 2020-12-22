@@ -60,7 +60,7 @@ Now database is connected, we can create a dashboard showing stats about the tes
      ![](_images/panel-name.png)
 
 4. From "Query" dropdown choose "MySQL".
-
+    ![](_images/panel-name.png)
    
    ![](_images/add-datasource-as-mysql.png)
 
