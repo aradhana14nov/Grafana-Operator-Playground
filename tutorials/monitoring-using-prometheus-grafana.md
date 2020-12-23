@@ -573,7 +573,7 @@ Output:
 grafanadatasource.integreatly.org/prometheus-grafanadatasource created
 ```
 
-Step 9 : Configure Grafana dashboard via Grafana UI
+Step 9 :Access and Configure Grafana dashboard via Grafana UI
 
 
 - Execute below command to get all services in "my-grafana-operator" namespace.
