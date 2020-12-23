@@ -23,7 +23,7 @@ The Operator can deploy and manage a Grafana instance on Kubernetes and OpenShif
 - Import Grafana data sources from the same namespace
 - Install Plugins (panels)
 
-# Grafana and Prometheus Operator Architecture
+# Grafana Operator Architecture
 A high level Prometheus & Grafana Architecture diagram is shown below :
 
 ![](_images/Grafana-Architecture.png)
