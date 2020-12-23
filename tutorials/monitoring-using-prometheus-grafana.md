@@ -323,7 +323,7 @@ subscription.operators.coreos.com/my-prometheus created
 This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
 
 
-- After Operator installation, verify that your operator got successfully installed by executing the below command.:
+- After Operator installation, verify that your operator got successfully installed by executing the below command :
 
 ```execute
 kubectl get csv -n operators
@@ -338,7 +338,7 @@ prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0
 
 From above output, once operator is successfully installed, **PHASE** will be as "Succeeded" 
 
-- Check the Pods status using below command::
+- Check the Pods status using below command:
 
 ```execute
 kubectl get pods -n operators
@@ -415,7 +415,7 @@ prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          14m
 prometheus-server-0                    3/3     Running   1          40s
 ```
 
-- Create the service to access prometheus server
+- Create below yaml definition of the Custom Resource to create the service NodePort to access prometheus server
 
 
 ```execute
@@ -450,7 +450,7 @@ service/prometheus created
 ```
 
 
-- Create Instance of ServiceMonitor using below yaml :
+- Create below yaml definition of the Custom Resource to create Instance of ServiceMonitor:
 
 
 ```execute
