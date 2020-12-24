@@ -631,3 +631,9 @@ Now you will be able to see the Dashboard like below:
 
 
 
+### Configure Grafana Dashboard to visualise MariaDB monitoring metrics
+
+Please go to Grafana Dashboard tutorial
+
+
+
