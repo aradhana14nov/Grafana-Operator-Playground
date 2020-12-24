@@ -37,7 +37,7 @@ kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml
 kubectl get csv -n my-mariadb-operator-app
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
@@ -55,7 +55,7 @@ Note: Once operator is successfully installed, Output PHASE should be as "Succee
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                               READY   STATUS    RESTARTS   AGE
@@ -118,7 +118,7 @@ mariadb.mariadb.persistentsys/mariadb created
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                               READY   STATUS    RESTARTS   AGE
@@ -235,7 +235,8 @@ Step 4: Enable monitoring service for MariaDB Server.
   kubectl get svc -n my-mariadb-operator-app
   ```
 
- Output:
+ You will see a similar Output as below:
+ 
  ```
       NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
  mariadb-operator-metrics   ClusterIP   10.111.158.91    <none>        8383/TCP,8686/TCP   3d4h
@@ -294,7 +295,7 @@ This will start Prometheus exporter pod and service.
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                                          READY   STATUS    RESTARTS   AGE
@@ -329,7 +330,7 @@ This Operator will be installed in the "operators" namespace and will be usable 
 kubectl get csv -n operators
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                        DISPLAY               VERSION   REPLACES                    PHASE
@@ -344,7 +345,7 @@ From above output, once operator is successfully installed, **PHASE** will be as
 kubectl get pods -n operators
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -407,7 +408,7 @@ prometheus.monitoring.coreos.com/server created
 kubectl get pods -n operators
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -495,7 +496,7 @@ servicemonitor.monitoring.coreos.com/mariadb-monitor created
 kubectl get pods -n operators
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -584,7 +585,8 @@ kubectl get svc -n my-grafana-operator
 ```
 
 
-Output :
+You will see a similar Output as below:
+
 
 ```
 NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
